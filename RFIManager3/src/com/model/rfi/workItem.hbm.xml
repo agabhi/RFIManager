@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+ <hibernate-mapping>
+   <class name="com.model.rfi.WorkItem" table="work_item">
+    
+    <id name="workItemId" column="work_Item_Id">
+    	<generator class="native"/>
+    </id>
+    
+    <property name="itemDescription">
+   	<column name="item_description"/>
+   </property>
+   
+   <property name="boqNumber">
+   		<column name="boq_number"/>
+   </property>
+   
+   <property name="sequence">
+   		<column name="sequence"/>
+   </property>
+    
+    <set name="layers" table="work_item_layers" cascade="all" lazy="false">
+		<key column="work_item_id"/>
+		<element column="layer" type="string"/>
+	</set>
+	
+	<set name="sides" table="work_item_sides" cascade="all" lazy="false">
+		<key column="work_item_id"/>
+		<element column="side" type="string"/>
+	</set>
+	
+	<set name="activities" table="work_item_activities" cascade="all" lazy="false">
+		<key column="work_item_id"/>
+		<element column="activity" type="string"/>
+	</set>
+  
+  </class>
+  
+ </hibernate-mapping>

@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>My First Grid</title>
+ 
+<link rel="stylesheet" type="text/css" media="screen" href="css/ui-lightness/jquery-ui-1.8.16.custom.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="css/ui.jqgrid.css" />
+
+
+ 
+ 
+<script src="js/jquery-1.5.2.min.js" type="text/javascript"></script>
+<script src="js/i18n/grid.locale-en.js" type="text/javascript"></script>
+<script src="js/jquery.jqGrid.mi.js" type="text/javascript"></script>
+<script src="js/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
+<script src="script/rfi.js"></script>
+
+<style>
+.ui-jqgrid {font-size:0.9em}
+</style>
+ 
+<script type="text/javascript">
+$(function(){ 
+  var mygrid = $("#list").jqGrid({
+    url:'rfiXml.htm',
+    datatype: 'xml',
+    mtype: 'POST',
+    colNames:['RFI Code','RFI No.', 'Issue date','Item','WI Remarks', 'From','To','Side', 'Layer','Status','Gr.','Insp Date','Created By', 'Updated by','Appr From','Appr To','Appr Side', 'Appr Layer','Appr Date','Bill No.','Remarks'],
+    colModel :[ 
+      {name:'rfiCode', index:'rfi_code', width:'40', searchoptions:{sopt:['eq','ne']}}, 
+      {name:'rfiNumber', index:'rfi_number', width:'60', align:'right', search:true, searchoptions:{sopt:['eq','ne','lt','le','gt','ge']}},
+      {name:'issueDate', index:'issue_date', width:'100'}, 
+      //{name:'issueDate', index:'issue_date', width:'5', align:'right', search:true, searchoptions:{dataInit:function(el){$(el).datepicker({dateFormat:'yy-mm-dd',onClose: function(dateText, inst) {$("#list")[0].triggerToolbar();}});} }}, 
+      {name:'item', index:'item_description', width:'400', align:'left', searchoptions:{sopt:['eq','ne']}},
+      {name:'wiRemarks', index:'wi_remarks', width:'200', align:'left', searchoptions:{sopt:['eq','ne']}},
+      {name:'fromChainage', index:'from_chainage', width:'80', align:'right', searchoptions:{sopt:['eq','ne','lt','le','gt','ge']}, searchrules:{custom:true, custom_func:function(value){if(!isNumeric(value))return [false,"From field should be numeric"]; else return [true,""]} }}, 
+      {name:'toChainage', index:'to_chainage', width:'80', align:'right', searchoptions:{sopt:['eq','ne','lt','le','gt','ge']}, searchrules:{custom:true, custom_func:function(value){if(!isNumeric(value))return [false,"To field should be numeric"]; else return [true,""]} }},
+      
+      {name:'side', index:'side', width:'80', searchoptions:{sopt:['eq','ne','lt','le','gt','ge']}}, 
+      {name:'layer', index:'layer', width:'80', searchoptions:{sopt:['eq','ne','lt','le','gt','ge']}},
+      {name:'status', index:'status', width:'100', searchoptions:{sopt:['eq','ne']}},
+      {name:'grade', index:'grade', width:'60', searchoptions:{sopt:['eq','ne','lt','le','gt','ge']}}, 
+      {name:'inspectionDate', index:'inspection_date', width:'140', searchoptions:{sopt:['eq','ne','lt','le','gt','ge']}}, 
+      {name:'createdBy', index:'created_by_username', width:'100', searchoptions:{sopt:['eq','ne']}}, 
+      {name:'lastUpdatedBy', index:'last_edited_by_username', width:'100', searchoptions:{sopt:['eq','ne']}},
+      
+      {name:'approvedFrom', index:'approved_from', width:'90', align:'right', searchoptions:{sopt:['eq','ne','lt','le','gt','ge']}}, 
+      {name:'approvedTo', index:'approved_to', width:'90', align:'right', searchoptions:{sopt:['eq','ne','lt','le','gt','ge']}}, 
+      {name:'approvedSide', index:'approved_side', width:'90', searchoptions:{sopt:['eq','ne','lt','le','gt','ge']}}, 
+      {name:'approvedLayer', index:'approved_layer', width:'100', searchoptions:{sopt:['eq','ne','lt','le','gt','ge']}}, 
+      {name:'approvalDate', index:'approval_Date', width:'100', searchoptions:{sopt:['eq','ne','lt','le','gt','ge']}}, 
+      {name:'billNumber', index:'bill_number', width:'80', align:'right', searchoptions:{sopt:['eq','ne','lt','le','gt','ge']}},
+      
+      {name:'remarks', index:'remarks', width:'500', searchoptions:{sopt:['eq','ne','lt','le','gt','ge']}}
+    ],
+    pager: '#pager',
+    rowNum:10,
+    rowList:[10,20,30],
+    sortname: 'rfi_number',
+    sortorder: 'desc',
+    viewrecords: true,
+    gridview: true,
+    height: "100%",
+    //width: "1200",
+    shrinkToFit:false,
+    autowidth: true,
+    //forceFit:true,
+    caption: 'My first grid'
+  });
+
+  $(window).bind('resize', function() {
+	    $("#list").setGridWidth($(window).width()-20);
+	}).trigger('resize');
+
+  jQuery("#list").jqGrid('navGrid','#pager',
+		  {
+		  	edit:false,add:false,del:false,search:true
+		  },
+		  {}, // edit options
+		  {}, // add options
+		  {}, //del options
+		  {multipleSearch:true, multipleGroup:true, showQuery: true, closeAfterSearch:true, closeAfterReset:true, beforeShowSearch:function(){mygrid[0].clearToolbar();}} // search options
+		  );
+
+  //jQuery("#list").jqGrid('navGrid','#pager',{del:false,add:false,edit:false,search:true});
+  /*
+  jQuery("#list").jqGrid('navButtonAdd',"#pager",{caption:"Toggle",title:"Toggle Search Toolbar", buttonicon :'ui-icon-pin-s',
+	onClickButton:function(){
+		mygrid[0].toggleToolbar()
+	} 
+});
+jQuery("#list").jqGrid('navButtonAdd',"#pager",{caption:"Clear",title:"Clear Search",buttonicon :'ui-icon-refresh',
+	onClickButton:function(){
+		alert("Clearing2");
+		mygrid[0].clearToolbar();
+		alert("Cleared");
+	} 
+});
+*/
+ jQuery("#list").jqGrid('filterToolbar',{stringResult: false,searchOnEnter : false, beforeSearch:function(){var grid = $("#list");
+ grid.jqGrid('setGridParam',{search:false});
+
+ var postData = grid.jqGrid('getGridParam','postData');
+ $.extend(postData,{filters:""});
+ // for singe search you should replace the line with
+ $.extend(postData,{searchField:"",searchString:"",searchOper:""});
+
+// grid.trigger("reloadGrid",[{page:1}]);
+ }});
+//jQuery("#list").jqGrid('filterToolbar');
+  
+}); 
+
+</script>
+ 
+</head>
+<body>
+<div id="container" style="width:100%">
+<table id="list" width="100%"><tr style="width:100%"><td/></tr></table> 
+<div id="pager"></div> 
+</div>
+</body>
+</html>

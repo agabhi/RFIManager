@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+ <hibernate-mapping>
+ 
+  <class name="com.model.rfi.RFIBill" table="rfi_bill">
+    
+    <id name="rfiBillId" column="rfi_bill_id">
+    	<generator class="native"/>
+    </id>
+    
+    <property name="rfiNumber">
+   		<column name="rfi_number"/>
+   	</property>
+   	
+   	<property name="billNumber">
+   		<column name="bill_number"/>
+   	</property>
+   	
+   	<property name="billSide">
+   		<column name="bill_side"/>
+   	</property>
+   	
+   	<property name="billFrom">
+   		<column name="bill_from"/>
+   	</property>
+   	
+   	<property name="billTo">
+   		<column name="bill_to"/>
+   	</property>
+   	
+   	<property name="quantity">
+   		<column name="quantity"/>
+   	</property>
+   	
+   	<property name="payableQuantity">
+   		<column name="payable_quantity"/>
+   	</property>
+   	
+   	<property name="deductQuantity">
+   		<column name="deduct_quantity"/>
+   	</property>
+   	
+   	<property name="rate">
+   		<column name="rate"/>
+   	</property>
+   	
+   	<property name="amount">
+   		<column name="amount"/>
+   	</property>
+
+</class>
+
+ </hibernate-mapping>

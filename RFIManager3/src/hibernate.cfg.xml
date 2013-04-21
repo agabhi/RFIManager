@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+ <!DOCTYPE hibernate-configuration PUBLIC
+ "-//Hibernate/Hibernate Configuration DTD//EN"
+ "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+ <hibernate-configuration>
+ <session-factory>
+   <property name="hibernate.connection.driver_class">
+
+com.mysql.jdbc.Driver</property>
+   <property name="hibernate.connection.url">
+
+jdbc:mysql://localhost:3306/rfi</property>
+   <property name="hibernate.connection.username">root</property>
+   <property name="hibernate.connection.password">kaiman_mysql</property>
+   <property name="hibernate.connection.pool_size">1</property>
+   <property name="show_sql">true</property>
+   <property name="format_sql">true</property>
+   <property name="use_sql_comments">true</property>
+   <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+   <property name="hibernate.hbm2ddl.auto">update</property>
+      
+   <!-- Mapping files -->
+   <mapping resource="com/model/rfi/rfi.hbm.xml"/>
+   <mapping resource="com/model/rfi/rfiApproval.hbm.xml"/>
+   <mapping resource="com/model/rfi/workItem.hbm.xml"/>
+   <mapping resource="com/model/rfi/side.hbm.xml"/>
+   <mapping resource="com/model/rfi/activity.hbm.xml"/>
+   <mapping resource="com/model/rfi/layer.hbm.xml"/>
+   <mapping resource="com/model/rfi/bill.hbm.xml"/>
+   <mapping resource="com/model/rfi/expandedRfi.hbm.xml"/>
+   <mapping resource="com/model/rfi/grade.hbm.xml"/>
+   <mapping resource="com/model/rfi/rfiCode.hbm.xml"/>
+   <mapping resource="com/model/rfi/status.hbm.xml"/>
+   <mapping resource="com/model/rfi/boq.hbm.xml"/>
+   <mapping resource="com/model/rfi/barChart.hbm.xml"/>
+   <mapping resource="com/model/rfi/layerException.hbm.xml"/>
+   <mapping resource="com/model/rfi/quantity.hbm.xml"/>
+   <mapping resource="com/model/rfi/rfiBill.hbm.xml"/>
+ </session-factory>
+ </hibernate-configuration>
+

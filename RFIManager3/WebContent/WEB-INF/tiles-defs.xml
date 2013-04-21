@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+	"-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+	"http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+	<definition name="baseLayout" template="/jsp/baseLayout.jsp">
+		<put-attribute name="title"  value="Template"/>
+		<put-attribute name="header" value="/jsp/header.jsp"/>
+		<put-attribute name="menu"   value="/jsp/menu.jsp"/>
+		<put-attribute name="body"   value="/jsp/rfiForm.jsp"/>
+		<put-attribute name="footer"   value="/jsp/footer.jsp"/>
+	</definition>
+
+	<definition name="addRfiLayout" extends="baseLayout">
+		<put-attribute name="body"   value="/jsp/rfiForm.jsp"/>     
+	</definition>
+
+	<definition name="editRfiLayout1" extends="baseLayout">
+		<put-attribute name="body"   value="/editRFI.htm"/>     
+	</definition>
+	
+	<definition name="editRfiLayout" template="/jsp/baseLayout.jsp">
+		<put-attribute name="title"  value="Template"/>
+		<put-attribute name="header" value="/jsp/header.jsp"/>
+		<put-attribute name="menu"   value="/jsp/menu.jsp"/>
+		<put-attribute name="body"   value="/jsp/editRFIForm.jsp"/>
+		<put-attribute name="footer"   value="/jsp/footer.jsp"/>
+	</definition>
+	
+	<definition name="userRegisterLayout" template="/jsp/baseLayout.jsp">
+		<put-attribute name="title"  value="Template"/>
+		<put-attribute name="header" value="/jsp/header.jsp"/>
+		<put-attribute name="menu"   value="/jsp/menu.jsp"/>
+		<put-attribute name="body"   value="/jsp/newUserRegisterForm.jsp"/>
+		<put-attribute name="footer"   value="/jsp/footer.jsp"/>
+	</definition>
+	
+	<definition name="editPreviousBillLayout" template="/jsp/baseLayout.jsp">
+		<put-attribute name="title"  value="Template"/>
+		<put-attribute name="header" value="/jsp/header.jsp"/>
+		<put-attribute name="menu"   value="/jsp/menu.jsp"/>
+		<put-attribute name="body"   value="/jsp/editPreviousBillLayout.jsp"/>
+		<put-attribute name="footer"   value="/jsp/footer.jsp"/>
+	</definition>
+	
+	<definition name="boqLayout" template="/jsp/baseLayout.jsp">
+		<put-attribute name="title"  value="Template"/>
+		<put-attribute name="header" value="/jsp/header.jsp"/>
+		<put-attribute name="menu"   value="/jsp/menu.jsp"/>
+		<put-attribute name="body"   value="/jsp/boqForm.jsp"/>
+		<put-attribute name="footer"   value="/jsp/footer.jsp"/>
+	</definition>
+	
+	<definition name="showBillsLayout" template="/jsp/baseLayout.jsp">
+		<put-attribute name="title"  value="Template"/>
+		<put-attribute name="header" value="/jsp/header.jsp"/>
+		<put-attribute name="menu"   value="/jsp/menu.jsp"/>
+		<put-attribute name="body"   value="/jsp/showBillsLayout.jsp"/>
+		<put-attribute name="footer"   value="/jsp/footer.jsp"/>
+	</definition>
+	
+	<definition name="viewPreviousBillLayout" template="/jsp/baseLayout.jsp">
+		<put-attribute name="title"  value="Template"/>
+		<put-attribute name="header" value="/jsp/header.jsp"/>
+		<put-attribute name="menu"   value="/jsp/menu.jsp"/>
+		<put-attribute name="body"   value="/jsp/viewPreviousBillLayout.jsp"/>
+		<put-attribute name="footer"   value="/jsp/footer.jsp"/>
+	</definition>
+	
+	<definition name="quantityLayout" template="/jsp/baseLayout.jsp">
+		<put-attribute name="title"  value="Template"/>
+		<put-attribute name="header" value="/jsp/header.jsp"/>
+		<put-attribute name="menu"   value="/jsp/menu.jsp"/>
+		<put-attribute name="body"   value="/jsp/quantityForm.jsp"/>
+		<put-attribute name="footer"   value="/jsp/footer.jsp"/>
+	</definition>
+	
+	<definition name="workItemLayout" template="/jsp/baseLayout.jsp">
+		<put-attribute name="title"  value="Template"/>
+		<put-attribute name="header" value="/jsp/header.jsp"/>
+		<put-attribute name="menu"   value="/jsp/menu.jsp"/>
+		<put-attribute name="body"   value="/jsp/workItemForm.jsp"/>
+		<put-attribute name="footer"   value="/jsp/footer.jsp"/>
+	</definition>
+	
+	<definition name="statusLayout" template="/jsp/baseLayout.jsp">
+		<put-attribute name="title"  value="Template"/>
+		<put-attribute name="header" value="/jsp/header.jsp"/>
+		<put-attribute name="menu"   value="/jsp/menu.jsp"/>
+		<put-attribute name="body"   value="/jsp/statusForm.jsp"/>
+		<put-attribute name="footer"   value="/jsp/footer.jsp"/>
+	</definition>
+	
+	<definition name="gradeLayout" template="/jsp/baseLayout.jsp">
+		<put-attribute name="title"  value="Template"/>
+		<put-attribute name="header" value="/jsp/header.jsp"/>
+		<put-attribute name="menu"   value="/jsp/menu.jsp"/>
+		<put-attribute name="body"   value="/jsp/gradeForm.jsp"/>
+		<put-attribute name="footer"   value="/jsp/footer.jsp"/>
+	</definition>
+	
+	<definition name="dashboardLayout" template="/jsp/baseLayout.jsp">
+		<put-attribute name="title"  value="Template"/>
+		<put-attribute name="header" value="/jsp/header.jsp"/>
+		<put-attribute name="menu"   value="/jsp/menu.jsp"/>
+		<put-attribute name="body"   value="/jsp/dashboard.jsp"/>
+		<put-attribute name="footer"   value="/jsp/footer.jsp"/>
+	</definition>
+	
+	<definition name="prepareBillLayout" template="/jsp/baseLayout.jsp">
+		<put-attribute name="title"  value="Template"/>
+		<put-attribute name="header" value="/jsp/header.jsp"/>
+		<put-attribute name="menu"   value="/jsp/menu.jsp"/>
+		<put-attribute name="body"   value="/jsp/preparedBill.jsp"/>
+		<put-attribute name="footer"   value="/jsp/footer.jsp"/>
+	</definition>
+	
+	
+	
+	<definition name="noPreparedBillLayout" template="/jsp/baseLayout.jsp">
+		<put-attribute name="title"  value="Template"/>
+		<put-attribute name="header" value="/jsp/header.jsp"/>
+		<put-attribute name="menu"   value="/jsp/menu.jsp"/>
+		<put-attribute name="body"   value="/jsp/noPreparedBill.jsp"/>
+		<put-attribute name="footer"   value="/jsp/footer.jsp"/>
+	</definition>
+	
+	<definition name="checkPreparedBillLayout" template="/jsp/baseLayout.jsp">
+		<put-attribute name="title"  value="Template"/>
+		<put-attribute name="header" value="/jsp/header.jsp"/>
+		<put-attribute name="menu"   value="/jsp/menu.jsp"/>
+		<put-attribute name="body"   value="/jsp/checkPreparedBillLayout.jsp"/>
+		<put-attribute name="footer"   value="/jsp/footer.jsp"/>
+	</definition>
+	
+	<definition name="statusBarChartLayout" template="/jsp/baseLayout.jsp">
+		<put-attribute name="title"  value="Template"/>
+		<put-attribute name="header" value="/jsp/header.jsp"/>
+		<put-attribute name="menu"   value="/jsp/menu.jsp"/>
+		<put-attribute name="body"   value="/jsp/statusBarChartForm.jsp"/>
+		<put-attribute name="footer"   value="/jsp/footer.jsp"/>
+	</definition>
+	
+	<definition name="viewCalculationSheetLayout" template="/jsp/baseLayout.jsp">
+		<put-attribute name="title"  value="Template"/>
+		<put-attribute name="header" value="/jsp/header.jsp"/>
+		<put-attribute name="menu"   value="/jsp/menu.jsp"/>
+		<put-attribute name="body"   value="/jsp/viewCalculationSheetLayout.jsp"/>
+		<put-attribute name="footer"   value="/jsp/footer.jsp"/>
+	</definition>
+	
+	<definition name="viewDeductionSheetLayout" template="/jsp/baseLayout.jsp">
+		<put-attribute name="title"  value="Template"/>
+		<put-attribute name="header" value="/jsp/header.jsp"/>
+		<put-attribute name="menu"   value="/jsp/menu.jsp"/>
+		<put-attribute name="body"   value="/jsp/viewDeductionSheetLayout.jsp"/>
+		<put-attribute name="footer"   value="/jsp/footer.jsp"/>
+	</definition>
+	
+	<definition name="savedStatusBarChartLayout" template="/jsp/baseLayout.jsp">
+		<put-attribute name="title"  value="Template"/>
+		<put-attribute name="header" value="/jsp/header.jsp"/>
+		<put-attribute name="menu"   value="/jsp/menu.jsp"/>
+		<put-attribute name="body"   value="/jsp/savedStatusBarChartForm.jsp"/>
+		<put-attribute name="footer"   value="/jsp/footer.jsp"/>
+	</definition>
+	
+	<definition name="gapsLayout" template="/jsp/baseLayout.jsp">
+		<put-attribute name="title"  value="Template"/>
+		<put-attribute name="header" value="/jsp/header.jsp"/>
+		<put-attribute name="menu"   value="/jsp/menu.jsp"/>
+		<put-attribute name="body"   value="/jsp/gapsForm.jsp"/>
+		<put-attribute name="footer"   value="/jsp/footer.jsp"/>
+	</definition>
+	
+	<definition name="sideLayout" template="/jsp/baseLayout.jsp">
+		<put-attribute name="title"  value="Template"/>
+		<put-attribute name="header" value="/jsp/header.jsp"/>
+		<put-attribute name="menu"   value="/jsp/menu.jsp"/>
+		<put-attribute name="body"   value="/jsp/sideForm.jsp"/>
+		<put-attribute name="footer"   value="/jsp/footer.jsp"/>
+	</definition>
+	
+	<definition name="activityLayout" template="/jsp/baseLayout.jsp">
+		<put-attribute name="title"  value="Template"/>
+		<put-attribute name="header" value="/jsp/header.jsp"/>
+		<put-attribute name="menu"   value="/jsp/menu.jsp"/>
+		<put-attribute name="body"   value="/jsp/activityForm.jsp"/>
+		<put-attribute name="footer"   value="/jsp/footer.jsp"/>
+	</definition>
+	
+	<definition name="layerLayout" template="/jsp/baseLayout.jsp">
+		<put-attribute name="title"  value="Template"/>
+		<put-attribute name="header" value="/jsp/header.jsp"/>
+		<put-attribute name="menu"   value="/jsp/menu.jsp"/>
+		<put-attribute name="body"   value="/jsp/layerForm.jsp"/>
+		<put-attribute name="footer"   value="/jsp/footer.jsp"/>
+	</definition>
+	
+	<definition name="layerExceptionsLayout" template="/jsp/baseLayout.jsp">
+		<put-attribute name="title"  value="Template"/>
+		<put-attribute name="header" value="/jsp/header.jsp"/>
+		<put-attribute name="menu"   value="/jsp/menu.jsp"/>
+		<put-attribute name="body"   value="/jsp/layerExceptionForm.jsp"/>
+		<put-attribute name="footer"   value="/jsp/footer.jsp"/>
+	</definition>
+	
+	<definition name="rfiCodeLayout" template="/jsp/baseLayout.jsp">
+		<put-attribute name="title"  value="Template"/>
+		<put-attribute name="header" value="/jsp/header.jsp"/>
+		<put-attribute name="menu"   value="/jsp/menu.jsp"/>
+		<put-attribute name="body"   value="/jsp/rfiCodeForm.jsp"/>
+		<put-attribute name="footer"   value="/jsp/footer.jsp"/>
+	</definition>
+	
+	<definition name="importRfiLayout" template="/jsp/baseLayout.jsp">
+		<put-attribute name="title"  value="Template"/>
+		<put-attribute name="header" value="/jsp/header.jsp"/>
+		<put-attribute name="menu"   value="/jsp/menu.jsp"/>
+		<put-attribute name="body"   value="/jsp/uploadForm.jsp"/>
+		<put-attribute name="footer"   value="/jsp/footer.jsp"/>
+	</definition>
+	
+	<definition name="importSuccessRfiLayout" template="/jsp/baseLayout.jsp">
+		<put-attribute name="title"  value="Template"/>
+		<put-attribute name="header" value="/jsp/header.jsp"/>
+		<put-attribute name="menu"   value="/jsp/menu.jsp"/>
+		<put-attribute name="body"   value="/jsp/uploadSuccess.jsp"/>
+		<put-attribute name="footer"   value="/jsp/footer.jsp"/>
+	</definition>
+	
+</tiles-definitions>

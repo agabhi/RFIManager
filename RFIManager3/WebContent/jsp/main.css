@@ -1,0 +1,72 @@
+table.gridtable {
+  border-collapse: collapse;
+  border: 1px solid #03476F;
+  font: normal 11px verdana, arial, helvetica, sans-serif;
+  color: #363636;
+  background: #92C428;
+  }
+table.gridtable caption {
+  text-align: center;
+  font: bold 18px arial, helvetica, sans-serif;
+  background: transparent;
+  padding:6px 4px 8px 0px;
+  color: #03476F;
+  text-transform: uppercase;
+  }
+table.gridtabletd, table.gridtableth {
+  border: 1px dotted #03476F;
+  padding: .4em;
+  color: #363636;
+  }
+
+table.gridtable thead th, table.gridtable tfoot th {
+  font: bold 11px verdana, arial, helvetica, sans-serif;
+  border: 1px solid #03476F;;
+  text-align: left;
+  background: #4591AD;
+  color: #FFFFFF;
+  padding-top:3px;
+  }
+table.gridtable tbody td a {
+  background: transparent;
+  text-decoration: none;
+  color: #363636;
+  }
+table.gridtable tbody td a:hover {
+  background: #C2F64D;
+  color: #363636;
+  }
+table.gridtable tbody th a {
+  font: normal 11px verdana, arial, helvetica, sans-serif;
+  background: transparent;
+  text-decoration: none;
+  font-weight:normal;
+  color: #363636;
+  }
+table.gridtable tbody th a:hover {
+  background: transparent;
+  color: #363636;
+  }
+table.gridtable tbody th, tbody td {
+  vertical-align: top;
+  text-align: left;
+  }
+table.gridtable tfoot td {
+  border: 1px solid #03476F;
+  background: #4591AD;
+  padding-top:3px;
+  color: #FFFFFF;
+  }
+table.gridtable .odd {
+  background: #AEE239;
+  }
+table.gridtable tbody tr:hover {
+  background: #FFD800;
+  border: 1px solid #03476F;
+  color: #FFFFFF;
+  }
+table.gridtable tbody tr:hover th,
+table.gridtable tbody tr.odd:hover th {
+  background: #FFD800;
+  color: #FFFFFF;
+  }
