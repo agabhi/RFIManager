@@ -30,6 +30,16 @@
 <script src="js/JsonXml.js" type="text/javascript"></script>
 <script src="js/grid.import.js" type="text/javascript"></script>
 
+<style>
+/* .ui-jqgrid {font-size:0.9em}
+ */
+table.curvedEdges { border:1px solid lightgray;-webkit-border-radius:8px;-moz-border-radius:8px;border-radius:8px; }
+table.curvedEdges td table.curvedEdges th { border-bottom:1px dotted black;padding:5px; }
+
+table.curvedEdges1 { border:1px solid lightgray;-webkit-border-top-left-radius:8px;-moz-border-top-left-radius:8px;border-top-left-radius:8px;-webkit-border-top-right-radius:8px;-moz-border-top-right-radius:8px;border-top-right-radius:8px; }
+table.curvedEdges1 td table.curvedEdges1 th { border-bottom:1px dotted black;padding:5px; }
+
+</style>
 
 
 <script type="text/javascript">
@@ -673,7 +683,7 @@ return true;
 		
 		<tr>
 		       <td style="border:0">
-		        <label><font size="3">RFI Type</font></label>
+		        <label><font size="4">RFI Type</font></label>
 		        </td>
 		        <td style="border:0">
 				<form:select path="rfiCode"> 
@@ -682,7 +692,7 @@ return true;
 				</td>
 				
 				<td style="border:0">
-		        <label><font size="3">Activity</font></label>
+		        <label><font size="4">Activity</font></label>
 		        </td>
 		        <td style="border:0">
 				<form:select id="activity" path="activity" onchange="changeActivity()"> 
@@ -693,7 +703,7 @@ return true;
 		
 		<tr>
 		       <td style="border:0">
-		        <label><font size="3">BOQ No.</font></label>
+		        <label><font size="4">BOQ No.</font></label>
 		        </td>
 		        <td style="border:0">
 				<form:select id="boqNumber" path="boqNumber" onchange="changeBoqNumber()">
@@ -706,7 +716,7 @@ return true;
 		</tr>
 		
 		<tr>
-		       <td style="border:0"><label><font size="3">Item</font></label>
+		       <td style="border:0"><label><font size="4">Item</font></label>
 		       </td>
 		        <td style="border:0" colspan="3">
 				<form:select id="itemDescription" path="itemDescription" onchange="changeWorkItem()">
@@ -714,17 +724,17 @@ return true;
 					<form:options items="${itemsList}"/> 
 				</form:select> 
 				
-			    <font size="3">- WI Remarks</font><form:input id="wiRemarks" path="wiRemarks" />
+			    <font size="4">- WI Remarks</font><form:input id="wiRemarks" path="wiRemarks" />
 			    </td>
 		</tr>
 		
 		<tr>
-		       <td style="border:0"><label><font size="3"><font color="#000066"></font>From Chainage</font></font></label></td><td style="border:0"><form:input id="fromChainage" path="fromChainage" /></td>
-			   <td style="border:0"><label><font size="3">To Chainage</font></label></td><td style="border:0"><form:input id="toChainage" path="toChainage" /></td>
+		       <td style="border:0"><label><font size="4"><font color="#000066"></font>From Chainage</font></font></label></td><td style="border:0"><form:input id="fromChainage" path="fromChainage" /></td>
+			   <td style="border:0"><label><font size="4">To Chainage</font></label></td><td style="border:0"><form:input id="toChainage" path="toChainage" /></td>
 		</tr>
 		<tr>
 		        <td style="border:0">
-		        <label><font size="3">Side</font></label>
+		        <label><font size="4">Side</font></label>
 		        </td>
 		        <td style="border:0">
 				<form:select id="side" path="side"> 
@@ -732,7 +742,7 @@ return true;
 				</td>
 			   
 			   <td style="border:0">
-			   <label><font size="3">Layer</font></label>
+			   <label><font size="4">Layer</font></label>
 			   </td>
 		        <td style="border:0">
 				<form:select id="layer" path="layer"> 
@@ -740,12 +750,12 @@ return true;
 				</td>
 		</tr>
 		<tr>
-		       <td style="border:0"><label><font size="3">Issue Date</font></label></td><td style="border:0"><form:input id ="issueDate" path="issueDate" readonly="true"/></td>
-			   <td style="border:0"><label><font size="3">Inspection Date</font></label></td><td style="border:0"><form:input id ="inspectionDate" path="inspectionDate" readonly="true"/></td>
+		       <td style="border:0"><label><font size="4">Issue Date</font></label></td><td style="border:0"><form:input id ="issueDate" path="issueDate" readonly="true"/></td>
+			   <td style="border:0"><label><font size="4">Inspection Date</font></label></td><td style="border:0"><form:input id ="inspectionDate" path="inspectionDate" readonly="true"/></td>
 		</tr>
 		<tr>
 		       
-			   <td style="border:0"><label><font size="3">Remarks</font></label></td><td style="border:0"><form:textarea id="remarks" path="remarks" /></td>
+			   <td style="border:0"><label><font size="4">Remarks</font></label></td><td style="border:0"><form:textarea id="remarks" path="remarks" /></td>
 		</tr>
 
 		<tr style="width:100%;" >
