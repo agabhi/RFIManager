@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  - Sample namespace-based configuration
+  -
+  -->
+
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+    xmlns:beans="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                        http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+
+    <global-method-security pre-post-annotations="enabled">
+        <!-- AspectJ pointcut expression that locates our "post" method and applies security that way
+        <protect-pointcut expression="execution(* bigbank.*Service.post*(..))" access="ROLE_TELLER"/>
+        -->
+    </global-method-security>
+
+    <http use-expressions="true">
+    	
+    	<!-- Don't set any role restrictions on login.jsp -->
+    	<intercept-url pattern="/assets/**" access="permitAll()" />
+    	<intercept-url pattern="/fileUpload.htm" access="hasRole('ROLE_ADMIN')"  />
+    	<intercept-url pattern="/boq.htm" access="hasRole('ROLE_ADMIN')"  />
+    	<intercept-url pattern="/workItem.htm" access="hasRole('ROLE_ADMIN')"  />
+    	<intercept-url pattern="/layer.htm" access="hasRole('ROLE_ADMIN')"  />
+    	<intercept-url pattern="/side.htm" access="hasRole('ROLE_ADMIN')"  />
+    	<intercept-url pattern="/status.htm" access="hasRole('ROLE_ADMIN')"  />
+    	<intercept-url pattern="/grade.htm" access="hasRole('ROLE_ADMIN')"  />
+    	<intercept-url pattern="/rfiCode.htm" access="hasRole('ROLE_ADMIN')"  />
+    	<intercept-url pattern="/userRegister.htm" access="hasRole('ROLE_ADMIN')"  />
+    	
+    	<intercept-url pattern="/jsp/login.jsp" access="permitAll()" />
+    	
+    	<intercept-url pattern="/jsp/**" access="hasRole('ROLE_NONE')" />
+        
+        <intercept-url pattern="/images/**" access="permitAll()" />
+        <intercept-url pattern="/calendar/**" access="permitAll()" />
+        <intercept-url pattern="/codebase/**" access="permitAll()" />
+        <intercept-url pattern="/css/**" access="permitAll()" />
+        <intercept-url pattern="/dthmlxCalendar/**" access="permitAll()" />
+        <intercept-url pattern="/dthmlxLayout/**" access="permitAll()" />
+        <intercept-url pattern="/jqplot/**" access="permitAll()" />
+        <intercept-url pattern="/jqtransformplugin/**" access="permitAll()" />
+        <intercept-url pattern="/js/**" access="permitAll()" />
+        <intercept-url pattern="/script/**" access="permitAll()" />
+ 		
+ 		
+ 		<!-- Restrict access to ALL other pages -->
+ 		<intercept-url pattern="/**" access="isAuthenticated()"  />
+        <form-login login-page="/jsp/login.jsp" default-target-url="/home.htm" authentication-failure-url="/jsp/login.jsp?login_error=1" />
+        <logout logout-success-url="/jsp/login.jsp"/>
+        <remember-me />
+<!--
+    Uncomment to enable X509 client authentication support
+        <x509 />
+-->
+        <!-- Uncomment to limit the number of sessions a user can have 
+        <session-management invalid-session-url="/timeout.jsp">
+            <concurrency-control max-sessions="10" error-if-maximum-exceeded="true" />
+        </session-management>
+		-->
+    </http>
+
+    <!--
+    Usernames/Passwords are
+        rod/koala
+        dianne/emu
+        scott/wombat
+        peter/opal
+    
+  <authentication-manager>
+    <authentication-provider>
+      <user-service>
+        <user name="jimi" password="jimispassword" authorities="ROLE_USER, ROLE_ADMIN" />
+        <user name="bob" password="bobspassword" authorities="ROLE_USER" />
+      </user-service>
+    </authentication-provider>
+  </authentication-manager>
+	-->
+    
+    
+    <authentication-manager>
+        <authentication-provider>
+            <jdbc-user-service data-source-ref="dataSource" />
+        </authentication-provider>
+    </authentication-manager>
+
+</beans:beans>
