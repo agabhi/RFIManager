@@ -65,7 +65,8 @@
                     <div class="col-md-5" style="color: white">
                         <ul style="margin-bottom: 110px;">
                             <li class="nav-link"><a href="javascript:demo()">Demo</a></li>
-                            <li class="nav-link"><a href="<%=request.getContextPath()%>/pricing">Pricing</a></li>
+                            <%-- <li class="nav-link"><a href="<%=request.getContextPath()%>/pricing">Pricing</a></li> --%>
+                            <li class="nav-link"><a href="<%=request.getContextPath()%>/assets/RFI_Manager_Setup.pdf">Docs</a></li>
                             <li class="btn btn-warning">Contact</li>
                         </ul>
                         <form role="form" name="registrationForm" method="POST">

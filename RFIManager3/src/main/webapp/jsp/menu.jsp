@@ -187,7 +187,7 @@ background: lightblue;
 		<h3 class="menuheader expandable">CLIENT BILLS</h3>
 		<ul class="categoryitems" style="width:100%">
 			<li style="width:100%"><a style="color:black" href="prepareBill.htm">Prepare New Bill</a></li>
-			<li style="width:100%"><a style="color:black" href="checkPreparedBill.htm">Check Prepared Bill</a></li>
+			<!-- <li style="width:100%"><a style="color:black" href="checkPreparedBill.htm">Check Prepared Bill</a></li> -->
 			<li style="width:100%"><a style="color:black" href="billInbox.htm">Bill Inbox</a></li>
 		</ul>
 	</sec:authorize>
