@@ -21,22 +21,22 @@ jdbc:mysql://localhost:3306/rfi</property>
    <property name="hibernate.hbm2ddl.auto">update</property>
       
    <!-- Mapping files -->
-   <mapping resource="com/model/rfi/rfi.hbm.xml"/>
-   <mapping resource="com/model/rfi/rfiApproval.hbm.xml"/>
-   <mapping resource="com/model/rfi/workItem.hbm.xml"/>
-   <mapping resource="com/model/rfi/side.hbm.xml"/>
-   <mapping resource="com/model/rfi/activity.hbm.xml"/>
-   <mapping resource="com/model/rfi/layer.hbm.xml"/>
-   <mapping resource="com/model/rfi/bill.hbm.xml"/>
-   <mapping resource="com/model/rfi/expandedRfi.hbm.xml"/>
-   <mapping resource="com/model/rfi/grade.hbm.xml"/>
-   <mapping resource="com/model/rfi/rfiCode.hbm.xml"/>
-   <mapping resource="com/model/rfi/status.hbm.xml"/>
-   <mapping resource="com/model/rfi/boq.hbm.xml"/>
-   <mapping resource="com/model/rfi/barChart.hbm.xml"/>
-   <mapping resource="com/model/rfi/layerException.hbm.xml"/>
-   <mapping resource="com/model/rfi/quantity.hbm.xml"/>
-   <mapping resource="com/model/rfi/rfiBill.hbm.xml"/>
+   <mapping resource="hbm/rfi.hbm.xml"/>
+   <mapping resource="hbm/rfiApproval.hbm.xml"/>
+   <mapping resource="hbm/workItem.hbm.xml"/>
+   <mapping resource="hbm/side.hbm.xml"/>
+   <mapping resource="hbm/activity.hbm.xml"/>
+   <mapping resource="hbm/layer.hbm.xml"/>
+   <mapping resource="hbm/bill.hbm.xml"/>
+   <mapping resource="hbm/expandedRfi.hbm.xml"/>
+   <mapping resource="hbm/grade.hbm.xml"/>
+   <mapping resource="hbm/rfiCode.hbm.xml"/>
+   <mapping resource="hbm/status.hbm.xml"/>
+   <mapping resource="hbm/boq.hbm.xml"/>
+   <mapping resource="hbm/barChart.hbm.xml"/>
+   <mapping resource="hbm/layerException.hbm.xml"/>
+   <mapping resource="hbm/quantity.hbm.xml"/>
+   <mapping resource="hbm/rfiBill.hbm.xml"/>
  </session-factory>
  </hibernate-configuration>
 
