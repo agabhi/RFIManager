@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.model.rfi.Bill" table="bill">
+    
+		<id name="billNumber" column="bill_number">
+			<generator class="assigned"></generator>
+		</id>
+		
+		<property name="billFromDate">
+   			<column name="bill_from_date"/>
+   		</property>
+   		
+   		<property name="billToDate">
+   			<column name="bill_to_date"/>
+   		</property>
+   		
+   		<property name="billDate">
+   			<column name="bill_date"/>
+   		</property>
+    
+	</class>
+   
+</hibernate-mapping>

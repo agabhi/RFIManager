@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+ <!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+ <hibernate-mapping>
+   <class name="com.model.rfi.LayerException" table="layer_exceptions">
+    
+    <id name="exceptionId" column="exception_id">
+    	<generator class="native"/>
+    </id>
+    
+   <property name="fromChainage">
+   	<column name="from_chainage"/>
+   </property>
+   <property name="toChainage">
+   	<column name="to_chainage"/>
+   </property>
+   
+   
+   <property name="side">
+   	<column name="side"/>
+   </property>
+   
+   <property name="activity">
+   	<column name="activity"/>
+   </property>
+   
+   <property name="layer">
+   	<column name="layer"/>
+   </property>
+  
+   <property name="itemDescription">
+   	<column name="item_description"/>
+   </property>
+  </class>
+  
+ </hibernate-mapping>
