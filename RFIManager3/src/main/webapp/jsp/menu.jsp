@@ -173,7 +173,7 @@ background: lightblue;
 			<li style="width:100%"><a style="color:black" href="activity.htm">Activity</a></li>
 			<li style="width:100%"><a style="color:black" href="workItem.htm">Work Item</a></li>
 			<li style="width:100%"><a style="color:black" href="layer.htm" >Layer</a></li>
-			<li style="width:100%"><a style="color:black" href="layerExceptions.htm" >Layer Exceptions</a></li>
+			<li style="width:100%"><a style="color:black" href="layerExceptions.htm" >Layer Chart</a></li>
 			<li style="width:100%"><a style="color:black" href="side.htm">Side</a></li>
 			<li style="width:100%"><a style="color:black" href="status.htm">Status</a></li>
 			<li style="width:100%"><a style="color:black" href="grade.htm">Grade</a></li>

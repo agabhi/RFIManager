@@ -47,5 +47,11 @@
 					</form:form>
 				</td>
 			</tr>
+			
+			<tr>
+				<td style="padding-top:12;padding-bottom:0;font-size:large">
+					<a href="<%=request.getContextPath()%>/assets/RFI.xls">Download sample file</a>
+				</td>
+			</tr>
     </body>
 </html>

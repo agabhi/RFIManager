@@ -294,7 +294,7 @@ $(function(){
     mtype: 'POST',
     colNames:['Exception Id','Activity', 'Item', 'From','To','Side','Layer'],
     colModel :[ 
-      {name:'exceptionId', index:'exception_id', searchoptions:{sopt:['eq','ne']}}, 
+      {name:'exceptionId', index:'exception_id', hidden:true, searchoptions:{sopt:['eq','ne']}}, 
       {name:'activity', index:'activity', align:'left', searchoptions:{sopt:['eq','ne']}},
       {name:'item', index:'item_description', align:'left', searchoptions:{sopt:['eq','ne']}}, 
       {name:'fromChainage', index:'from_chainage', align:'right', searchoptions:{sopt:['eq','ne','lt','le','gt','ge']}}, 
@@ -316,7 +316,7 @@ $(function(){
     //forceFit:true,
     height:'100%',
     multiselect: true,
-    caption: 'Layer Exceptions List'
+    caption: 'Layer Chart List'
   });
 /*
   $(window).bind('resize', function() {
@@ -565,7 +565,7 @@ Array.prototype.contains = function (element) {
 		$.post(url1,
 					  {  },
 					  function(xml){
-						  document.getElementById('layerExceptionsForm').reset();$("#list").trigger("reloadGrid");alert("Layer Exception Added successfully"); 
+						  document.getElementById('layerExceptionsForm').reset();$("#list").trigger("reloadGrid");alert("Layer Added successfully"); 
 					  });
 
 return true;
@@ -598,7 +598,7 @@ return true;
 					<td style="border:0;padding-left:0px;padding-top:0px;padding-bottom:0px;padding-right:0px;">
 						<table class="curvedEdges1" style="width:100%;" cellspacing="0" cellpadding="5">
 							<tr><td style="background-image:url(css/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png); background-repeat: repeat-x;">
-			        			<label id="rfiHeader" style="font-family:Comic Sans MS;font-size:medium;color:#FFFFFF;">Add Layer Exception</label>
+			        			<label id="rfiHeader" style="font-family:Comic Sans MS;font-size:medium;color:#FFFFFF;">Add Layer</label>
 			        		</td></tr>
 			        	</table>
 			        	
@@ -678,7 +678,7 @@ return true;
 					<td style="border:0;padding-left:0px;padding-top:0px;padding-bottom:0px;padding-right:0px;">
 						<table class="curvedEdges1" style="width:100%;" cellspacing="0" cellpadding="5">
 							<tr><td style="background-image:url(css/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png); background-repeat: repeat-x;">
-			        			<label id="rfiHeader" style="font-family:Comic Sans MS;font-size:medium;color:#FFFFFF;">Edit Layer Exception</label>
+			        			<label id="rfiHeader" style="font-family:Comic Sans MS;font-size:medium;color:#FFFFFF;">Edit Layer</label>
 			        		</td></tr>
 			        	</table>
 			        	
@@ -757,7 +757,7 @@ return true;
 						<td style="border:0;padding-left:0px;padding-top:0px;padding-bottom:0px;padding-right:0px;">
 							<table class="curvedEdges1" style="width:100%;" cellspacing="0" cellpadding="5">
 								<tr><td style="background-image:url(css/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png); background-repeat: repeat-x;">
-				        			<label id="rfiHeader" style="font-family:Comic Sans MS;font-size:medium;color:#FFFFFF;">Import Layer Exceptions List</label>
+				        			<label id="rfiHeader" style="font-family:Comic Sans MS;font-size:medium;color:#FFFFFF;">Import Layer Chart List</label>
 				        		</td></tr>
 				        	</table>
 				        	
@@ -775,6 +775,12 @@ return true;
 							<input type="submit" value="Import" style="font-size:large;"/>
 								
 							</form:form>
+						</td>
+					</tr>
+					
+					<tr>
+						<td style="padding-top:12;padding-bottom:0;font-size:large">
+							<a href="<%=request.getContextPath()%>/assets/LayerChart.xls">Download sample file</a>
 						</td>
 					</tr>
 			</table>
