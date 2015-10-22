@@ -20,6 +20,7 @@
     <http use-expressions="true">
     	
     	<!-- Don't set any role restrictions on login.jsp -->
+    	<intercept-url pattern="favicon.ico" access="permitAll()" />
     	<intercept-url pattern="/assets/**" access="permitAll()" />
     	<intercept-url pattern="/fileUpload.htm" access="hasRole('ROLE_ADMIN')"  />
     	<intercept-url pattern="/boq.htm" access="hasRole('ROLE_ADMIN')"  />
