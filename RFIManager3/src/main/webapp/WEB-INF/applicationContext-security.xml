@@ -17,6 +17,7 @@
         -->
     </global-method-security>
 
+	<http pattern="/favicon.ico" security="none" />
     <http use-expressions="true">
     	
     	<!-- Don't set any role restrictions on login.jsp -->
